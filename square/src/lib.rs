@@ -15,11 +15,9 @@ pub fn start() -> Result<(), JsValue> {
         .ok_or("no 2d context")?
         .dyn_into::<CanvasRenderingContext2d>()?;
 
-    // Clear background
     context.set_fill_style(&JsValue::from_str("black"));
     context.fill_rect(0.0, 0.0, canvas.width() as f64, canvas.height() as f64);
 
-    // Draw centered red square
     let size = 200.0;
     let x = (canvas.width() as f64 - size) / 2.0;
     let y = (canvas.height() as f64 - size) / 2.0;
