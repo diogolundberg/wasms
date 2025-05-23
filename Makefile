@@ -1,6 +1,6 @@
 install:
-	@which wasm-pack >/dev/null || cargo install --locked wasm-pack
-	@which basic-http-server >/dev/null || cargo install --locked basic-http-server
+	cargo install cargo-binstall
+	cargo binstall --no-confirm wasm-pack basic-http-server
 
 pack-square:
 	wasm-pack build square --target web --out-dir static/module/square
