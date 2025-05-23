@@ -1,0 +1,15 @@
+{
+  "name": "square",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "square_bg.wasm",
+    "square.js",
+    "square.d.ts"
+  ],
+  "main": "square.js",
+  "types": "square.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
