@@ -15,14 +15,14 @@ pub fn start() -> Result<(), JsValue> {
         .ok_or("no 2d context")?
         .dyn_into::<CanvasRenderingContext2d>()?;
 
-    context.set_fill_style(&JsValue::from_str("black"));
+    context.set_fill_style_str("black");
     context.fill_rect(0.0, 0.0, canvas.width() as f64, canvas.height() as f64);
 
     let size = 200.0;
     let x = (canvas.width() as f64 - size) / 2.0;
     let y = (canvas.height() as f64 - size) / 2.0;
 
-    context.set_fill_style(&JsValue::from_str("red"));
+    context.set_fill_style_str("red");
     context.fill_rect(x, y, size, size);
 
     Ok(())
