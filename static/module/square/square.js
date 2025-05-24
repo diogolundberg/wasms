@@ -132,8 +132,8 @@ function __wbg_get_imports() {
         const ret = new Function(getStringFromWasm0(arg0, arg1));
         return ret;
     };
-    imports.wbg.__wbg_setfillStyle_4f8f616d87dea4df = function(arg0, arg1) {
-        arg0.fillStyle = arg1;
+    imports.wbg.__wbg_setfillStyle_2205fca942c641ba = function(arg0, arg1, arg2) {
+        arg0.fillStyle = getStringFromWasm0(arg1, arg2);
     };
     imports.wbg.__wbg_static_accessor_GLOBAL_88a902d13a557d07 = function() {
         const ret = typeof global === 'undefined' ? null : global;
