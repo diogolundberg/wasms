@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
+:root {
+    --bg-color: #000000;
+    --bg-color2: #595b67;
+    --hover: #fff;
+    --font: "Syne Mono", monospace;
+    --delay: 0.3s;
+}
+
+body {
+    animation: 1s ease-out var(--delay) 1 transition;
+    animation-fill-mode: forwards;
+    background: radial-gradient(
+        ellipse at bottom,
+        var(--bg-color) 0%,
+        var(--bg-color2) 100%
+    );
+    font-family: var(--font);
+    min-height: 100vh;
+    opacity: 0;
+}
+
+#logo {
+    display: flex;
+    height: 100px;
+    margin: 40px auto 0px;
+    width: 100px;
+}
+
+.links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 27px auto;
+    max-width: 800px;
+    width: auto;
+}
+
+.link {
+    align-items: center;
+    border: solid var(--hover) 2px;
+    border-radius: 10px;
+    color: var(--hover);
+    margin: 10px;
+    min-width: 130px;
+    padding: 5px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.link i {
+    font-size: 3rem;
+}
+
+@media (min-width: 32rem) {
+    .links {
+        flex-direction: row;
+    }
+}
+
+@media (hover: hover) {
+    .link:hover {
+        background-color: var(--hover);
+        color: var(--bg-color);
+    }
+}
+
+.link:active {
+    background-color: var(--hover);
+    color: var(--bg-color);
+}
+
+/*-------------------------animations-----------------------*/
+@keyframes transition {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
