@@ -1,14 +1,13 @@
 install:
-	cargo install cargo-binstall
+	which cargo-binstall >/dev/null || cargo install cargo-binstall
+	cargo binstall --no-confirm trunk
 	cargo binstall --no-confirm wasm-pack basic-http-server
 
 pack-square:
-	wasm-pack build square --target web --out-dir ../static/module/square
-	rm -f static/module/square/.gitignore
+	$(MAKE) -C square pack
 
-pack-ship:
-	wasm-pack build ship --target web --out-dir ../static/module/ship
-	rm -f static/module/square/.gitignore
+serve-square:
+	$(MAKE) -C square serve
 
 pack: pack-square
 

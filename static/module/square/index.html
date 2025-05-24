@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Red Square</title>
+        <style>
+            html,
+            body,
+            canvas {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: black;
+            }
+        </style>
+    <link rel="modulepreload" href="./square-7666f9cc99e082cd.js" crossorigin="anonymous" integrity="sha384-0mmQbCbyVZBJcm7bPnEXPYL3pvfAO8TnlhXmfpYiPPGCBS/h5awawEwkEM9xVbcV"><link rel="preload" href="./square-7666f9cc99e082cd_bg.wasm" crossorigin="anonymous" integrity="sha384-mb1F+AiM9pVhb7FvIjJErlew3i9fz9qrIZeiDmDT+4YNk6blMHfSGpEvIyM5LYiz" as="fetch" type="application/wasm"></head>
+    <body>
+        <canvas id="canvas" width="640" height="480"></canvas>
+    
+<script type="module">
+import init, * as bindings from './square-7666f9cc99e082cd.js';
+const wasm = await init({ module_or_path: './square-7666f9cc99e082cd_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>

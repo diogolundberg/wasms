@@ -79,6 +79,14 @@ function __wbg_get_imports() {
         const ret = arg0.call(arg1);
         return ret;
     }, arguments) };
+    imports.wbg.__wbg_clientHeight_216178c194000db4 = function(arg0) {
+        const ret = arg0.clientHeight;
+        return ret;
+    };
+    imports.wbg.__wbg_clientWidth_ce67a04dc15fce39 = function(arg0) {
+        const ret = arg0.clientWidth;
+        return ret;
+    };
     imports.wbg.__wbg_document_d249400bd7bd996d = function(arg0) {
         const ret = arg0.document;
         return isLikeNone(ret) ? 0 : addToExternrefTable0(ret);
@@ -93,10 +101,6 @@ function __wbg_get_imports() {
     imports.wbg.__wbg_getElementById_f827f0d6648718a8 = function(arg0, arg1, arg2) {
         const ret = arg0.getElementById(getStringFromWasm0(arg1, arg2));
         return isLikeNone(ret) ? 0 : addToExternrefTable0(ret);
-    };
-    imports.wbg.__wbg_height_838cee19ba8597db = function(arg0) {
-        const ret = arg0.height;
-        return ret;
     };
     imports.wbg.__wbg_instanceof_CanvasRenderingContext2d_df82a4d3437bf1cc = function(arg0) {
         let result;
@@ -135,6 +139,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbg_setfillStyle_2205fca942c641ba = function(arg0, arg1, arg2) {
         arg0.fillStyle = getStringFromWasm0(arg1, arg2);
     };
+    imports.wbg.__wbg_setheight_da683a33fa99843c = function(arg0, arg1) {
+        arg0.height = arg1 >>> 0;
+    };
+    imports.wbg.__wbg_setwidth_c5fed9f5e7f0b406 = function(arg0, arg1) {
+        arg0.width = arg1 >>> 0;
+    };
     imports.wbg.__wbg_static_accessor_GLOBAL_88a902d13a557d07 = function() {
         const ret = typeof global === 'undefined' ? null : global;
         return isLikeNone(ret) ? 0 : addToExternrefTable0(ret);
@@ -150,10 +160,6 @@ function __wbg_get_imports() {
     imports.wbg.__wbg_static_accessor_WINDOW_5de37043a91a9c40 = function() {
         const ret = typeof window === 'undefined' ? null : window;
         return isLikeNone(ret) ? 0 : addToExternrefTable0(ret);
-    };
-    imports.wbg.__wbg_width_5dde457d606ba683 = function(arg0) {
-        const ret = arg0.width;
-        return ret;
     };
     imports.wbg.__wbindgen_init_externref_table = function() {
         const table = wasm.__wbindgen_export_2;
