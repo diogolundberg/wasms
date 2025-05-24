@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>App</title>
+    <link rel="modulepreload" href="./counter-7a6cfcf2c5e612db.js" crossorigin="anonymous" integrity="sha384-5iERrcB+hnpNfInKWc2PAsEDKkRFbAocep82xifu37PwIJJorOsmQSAvDVjOKHTB"><link rel="preload" href="./counter-7a6cfcf2c5e612db_bg.wasm" crossorigin="anonymous" integrity="sha384-N2CuUkiuehQDKVuLdUTN42rOy4f9awUV4Aw8YhZsCuP6AAi3AyVOrsk98AHekPF9" as="fetch" type="application/wasm"></head>
+    <body>
+<script type="module">
+import init, * as bindings from './counter-7a6cfcf2c5e612db.js';
+const wasm = await init({ module_or_path: './counter-7a6cfcf2c5e612db_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>

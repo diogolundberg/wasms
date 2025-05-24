@@ -11,7 +11,7 @@ serve module:
 
 build:
     just pack square
-    just pack yew-app
+    just pack counter
 
 run:
 	basic-http-server static
