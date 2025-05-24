@@ -1,13 +1,68 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>App</title>
-    <link rel="modulepreload" href="/counter-3e8f1e366d59d9a5.js" crossorigin="anonymous" integrity="sha384-mc9D+M+RfmSywPy4VqBsMcCNT2NRiOqJnFVqaYyr2q7ia0lKTXIgGECXplG8VjxD"><link rel="preload" href="/counter-3e8f1e366d59d9a5_bg.wasm" crossorigin="anonymous" integrity="sha384-UQi4NkWoI5vcEjteWYyePlAR3YTCfhLYmpd20BX5qfNJtOJ1c/h9qR2L+4/fDs5p" as="fetch" type="application/wasm"></head>
+        <title>Counter</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+
+            * {
+                box-sizing: border-box;
+                font-family: "Syne Mono", monospace;
+            }
+
+            body {
+                margin: 0;
+                background-color: #f5f5f5;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                background-color: white;
+                padding: 2rem 3rem;
+                border-radius: 1rem;
+                box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            button {
+                background-color: #2563eb;
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 0.75rem;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                transition: background-color 0.2s ease;
+            }
+
+            button:hover {
+                background-color: #1d4ed8;
+            }
+
+            .plus-icon {
+                font-size: 1.25rem;
+                margin-right: 0.5rem;
+                display: inline-block;
+            }
+
+            .counter {
+                font-size: 2rem;
+                margin-top: 1.5rem;
+                color: #333;
+            }
+        </style>
+    <link rel="modulepreload" href="/counter-1b4086b31a1e47eb.js" crossorigin="anonymous" integrity="sha384-mc9D+M+RfmSywPy4VqBsMcCNT2NRiOqJnFVqaYyr2q7ia0lKTXIgGECXplG8VjxD"><link rel="preload" href="/counter-1b4086b31a1e47eb_bg.wasm" crossorigin="anonymous" integrity="sha384-OL4ym8hi1HnMQO47PfF77/qKLf3TQoM8sJojdN5a6q/wDQHX/2Y8sPfWVimks7UD" as="fetch" type="application/wasm"></head>
     <body>
 <script type="module">
-import init, * as bindings from '/counter-3e8f1e366d59d9a5.js';
-const wasm = await init({ module_or_path: '/counter-3e8f1e366d59d9a5_bg.wasm' });
+import init, * as bindings from '/counter-1b4086b31a1e47eb.js';
+const wasm = await init({ module_or_path: '/counter-1b4086b31a1e47eb_bg.wasm' });
 
 
 window.wasmBindings = bindings;
